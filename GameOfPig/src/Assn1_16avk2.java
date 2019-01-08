@@ -1,3 +1,12 @@
+/*
+* CMPE212 Assignment 1
+* Written by Anastasia Krause (16avk2 - 20063760)
+* submitted February 1st
+* This program is a simulation of a game called 'Pig'
+* The user rolls two dice and plays against a computer player
+* The program implements methods, loops, conditionals and console I/O
+*/
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,6 +23,8 @@ public class Assn1_16avk2 {
         turnScore = 0;
         robotTurnScore = 0;
     }
+    // Returns true if there is a next turn, false if not
+    // Modifies humanTurnScore based on dice roll
     public boolean rollHumanCalculation(int[] rolls){
         int first = rolls[0];
         int second = rolls[1];
@@ -55,7 +66,8 @@ public class Assn1_16avk2 {
             return false;
         }
     }
-
+    // Returns true if there is a next turn, false if not
+    // Modifies robotTurnScore based on dice roll
     public boolean rollRobotCalculation(int[] rolls) {
         int first = rolls[0];
         int second = rolls[1];
@@ -81,7 +93,7 @@ public class Assn1_16avk2 {
             return false;
         }
     }
-
+    // Generates 2 element array as dice roll
     public static int[] generateDiceRoll(){
         Random rand = new Random();
         int max = 6;
@@ -89,7 +101,8 @@ public class Assn1_16avk2 {
         int[] nums = {rand.nextInt(max) + min, rand.nextInt(max) + min};
         return nums;
     }
-
+    // Checks whether some player won
+    // Returns boolean true if game is won, and vice versa
     public static boolean gameWon(int human, int robot){
         boolean gameWon = false;
         if ((human >= 100) || (robot >= 100)){
@@ -97,11 +110,13 @@ public class Assn1_16avk2 {
         }
         return gameWon;
     }
-
+    // Reports user and robot score
     public void printScores() {
         System.out.println("YOUR SCORE: " + this.humanScore);
         System.out.println("OPPONENTS SCORE: " + this.robotScore + "\n");
     }
+
+    // converts integer input to string
     public String numbersToWords(int num){
         switch (num){
             case 1:
@@ -122,15 +137,15 @@ public class Assn1_16avk2 {
     }
 
     public static void main(String[] args) {
-        // 0 for human, 1 for robot
         Assn1_16avk2 Game = new Assn1_16avk2();
+        // Welcome messages
         System.out.println("***************************************");
         System.out.println("WELCOME TO THE GAME OF PIG!");
         System.out.println("Try to beat your opponent to 100 points!");
         System.out.println("***************************************");
 
+        // Continuously play until game won
         while (!gameWon(Game.humanScore, Game.robotScore)){
-            // HUMAN TURN
             boolean isHumanTurn = true;
             boolean isRobotTurn = true;
 
@@ -138,6 +153,7 @@ public class Assn1_16avk2 {
             Scanner reader = new Scanner(System.in);  // Reading from System.in
             reader.nextLine(); // Scans the next token of the input as an int.
 
+            // HUMAN turn, generates roll and evaluates dice roll with rollHumanCalculation()
             while (isHumanTurn) {
                 int[] nums = generateDiceRoll();
                 isHumanTurn = Game.rollHumanCalculation(nums);
@@ -146,6 +162,7 @@ public class Assn1_16avk2 {
             System.out.println("Your total turn score is: " + Game.turnScore);
             System.out.println("Your turn is over!\n");
 
+            // Adds turn score to total and resets to 0 after turn
             Game.humanScore += Game.turnScore;
             Game.turnScore = 0;
 
@@ -153,11 +170,12 @@ public class Assn1_16avk2 {
 
             System.out.println("It's your opponents turn!");
 
+            // ROBOT turn, generates roll and evaluates dice rollw ith rollRobotCalculation()
             while (isRobotTurn) {
                 int[] nums = generateDiceRoll();
                 isRobotTurn = Game.rollRobotCalculation(nums);
             }
-
+            // Adds turn score to cumulative score adn resets turn score to 0 after turn
             Game.robotScore += Game.robotTurnScore;
             System.out.println("Your opponent's total turn score is: " + Game.robotTurnScore);
             Game.robotTurnScore = 0;
@@ -166,8 +184,9 @@ public class Assn1_16avk2 {
 
             Game.printScores();
         }
-        System.out.println("********************************" );
+        // Finishes game messages
 
+        System.out.println("********************************" );
         System.out.println("\nThanks for playing! Final score is: ");
         Game.printScores();
     }
