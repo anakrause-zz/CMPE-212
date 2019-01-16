@@ -68,6 +68,7 @@ public class Assn1_16avk2 {
     }
     // Returns true if there is a next turn, false if not
     // Modifies robotTurnScore based on dice roll
+    // Robot's strategy is to hold as soon as turn score exceeds 25
     public boolean rollRobotCalculation(int[] rolls) {
         int first = rolls[0];
         int second = rolls[1];
@@ -86,7 +87,7 @@ public class Assn1_16avk2 {
             return true;
         } else {
             this.robotTurnScore += (first + second);
-            if (this.robotTurnScore < 40) {
+            if (this.robotTurnScore < 25) {
                 System.out.println("Opponent is rolling again!");
                 return true;
             }

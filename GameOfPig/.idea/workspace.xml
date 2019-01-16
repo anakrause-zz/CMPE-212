@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5a3a2eb-68f1-4a3c-a5ae-67dcb2964140" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Exercise1/Exercise1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameOfPig/Assn1_16avk2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfPig/Assn1_16avk2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assn1_16avk2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assn1_16avk2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,10 +19,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Assn1_16avk2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2613">
-              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="1071">
+              <caret line="70" column="67" selection-start-line="70" selection-start-column="67" selection-end-line="70" selection-end-column="67" />
               <folding>
-                <element signature="e#0#7364#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -50,26 +52,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="GameOfPig" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GameOfPig" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GameOfPig" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GameOfPig" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546925884378" />
@@ -126,6 +109,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.30769232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -152,7 +136,7 @@
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="right" id="Messages" order="8" weight="0.32469636" />
-      <window_info anchor="right" id="Run" order="9" weight="0.4526316" />
+      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.30850202" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -166,10 +150,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Assn1_16avk2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2613">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="1071">
+          <caret line="70" column="67" selection-start-line="70" selection-start-column="67" selection-end-line="70" selection-end-column="67" />
           <folding>
-            <element signature="e#0#7364#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
