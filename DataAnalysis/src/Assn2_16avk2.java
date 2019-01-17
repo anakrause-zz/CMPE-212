@@ -5,6 +5,14 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
+/*
+ * CMPE212 Assignment 2
+ * Written by Anastasia Krause (16avk2 - 20063760)
+ * submitted February 15th
+ * This program reads from csv file, parses pulses in data, and reoords insights to file
+ * The program implements methods, loops, conditionals and file I/O
+ */
+
 public class Assn2_16avk2 {
     // Sets all random voltage spikes that aren't continuous to 0, to smooth over data
     public static double[][] cleanMotorData(double[][] ampData){
@@ -109,15 +117,20 @@ public class Assn2_16avk2 {
             printWriter.write(textData);
             printWriter.close();
         }
-
     }
 
     // Calls all respective methods, throwing appropriate exceptions if needed
     public static void main(String[] args) throws IOException, FileNotFoundException {
         // converts file to array and cleans data appropriately, then writes to file
-        double[][] ampData = fileToArray("Logger.csv");
-        double[][] cleanedData = cleanMotorData(ampData);
-        writeToFile(cleanedData);
+        try {
+            double[][] ampData = fileToArray("Logger.csv");
+            double[][] cleanedData = cleanMotorData(ampData);
+            writeToFile(cleanedData);
+            System.out.println("Data successfully written to directory files!");
+        }
+        catch (Exception e) {
+            System.out.println("Data analysis did not commplete.");
+        }
     }
 }
 
